@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const FooterComp = (): JSX.Element => {
   return (
-    <Footer>
-      <nav className="navbar front-footer">
-        <div className="container">
+    <footer>
+      <nav className="navbar front-footer ">
+        <div className="container justify-content-center">
           <a href="#" className="nav-brand">
             <img src="/images/logo-hand.svg" alt="" />
             <div className="logo-text">
@@ -17,7 +17,7 @@ const FooterComp = (): JSX.Element => {
             </div>
           </a>
 
-          <ul className="nav">
+          <ul className="nav d-none d-md-flex">
             <li className="nav-item">
               <a href="#" className="nav-link text-light">
                 Home
@@ -66,22 +66,20 @@ const FooterComp = (): JSX.Element => {
 
         <div className="container">
           <div className="bottom">
-            <p>
+            <p className="text-center">
               © Love Vision Foundation, Inc. {new Date().getFullYear()}, We love
               spreading love
             </p>
-            <div className="social">
-              <span className="mr-2">Follow Us</span>
+            <div className="social text-center ">
+              <span className="mr-2 follow-us">Follow Us</span>
               <img src="/images/facebook.svg" className="mr-2" alt="" />
               <img src="/images/instagram.svg" alt="" />
             </div>
           </div>
         </div>
       </nav>
-    </Footer>
+    </footer>
   );
 };
 
 export default FooterComp;
-
-const Footer = styled.footer``;

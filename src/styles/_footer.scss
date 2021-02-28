@@ -5,7 +5,33 @@ footer {
   padding: 2rem 0;
 
   .front-footer {
-    @extend .front-nav;
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      img {
+        width: 4rem;
+      }
+      .logo-text {
+        margin-left: 0.5rem;
+        p {
+          margin: 0;
+          line-height: 0.3;
+        }
+        .top {
+          span {
+            font-size: 0.8rem;
+          }
+          letter-spacing: 0.2rem;
+        }
+        .bottom {
+          letter-spacing: 0.2rem;
+          font-size: 0.8rem;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
     background: inherit;
 
     .involved {
@@ -47,6 +73,14 @@ footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    @media screen and (max-width: 768px) {
+      .social {
+        margin-top: 1rem;
+        img {
+          max-width: 1rem;
+        }
+      }
     }
   }
 }

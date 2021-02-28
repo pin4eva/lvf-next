@@ -44,9 +44,24 @@
     }
   }
 
+  .intro {
+    .video1,
+    .video2 {
+      // width: 100%;
+      // max-width: 920px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   .testimonial {
+    position: relative;
+    margin-top: 2rem;
     &-slider {
-      margin-top: 2rem;
+      margin: 4rem 0;
+      // position: absolute;
+      // top: 25%;
       .inner {
         width: 100%;
         display: flex;
@@ -63,10 +78,28 @@
         }
       }
     }
+
+    .pattern1 {
+      background: url("/images/pattern1.svg") no-repeat;
+      height: 24.8rem;
+      width: 23rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .pattern2 {
+      background: url("/images/pattern2.svg") no-repeat;
+      @extend .pattern1;
+
+      left: 0;
+      top: 50%;
+    }
   }
 
   .gallery {
     &-slider {
+      margin-top: 3rem;
       .inner {
         display: flex;
         justify-content: center;
@@ -82,7 +115,9 @@
   }
 
   .team {
+    margin-top: 4rem;
     .board-members {
+      margin-top: 2rem;
       gap: 2rem;
       grid-row-gap: 3rem;
       .grid-item {
@@ -134,7 +169,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 15vh;
+      height: 20vh;
       .line {
         width: 2px;
         height: inherit;
@@ -148,6 +183,9 @@
         img {
           width: 100%;
           max-width: 6rem;
+          @media screen and (max-width: 768px) {
+            max-width: 3rem;
+          }
         }
       }
     }

@@ -26,23 +26,23 @@ const HomePage: React.FC = () => {
       <main>
         <div className="container">
           <div className="intro">
-            <div className="text-center my-4">
+            <div className="text-center my-5">
               <div className="section-title">
                 <div className="line"></div>
                 <p> What We Do</p>
                 <div className="line"></div>
               </div>
               <p>
-                Love Vision foundation was birth from James 1 : 27. The vision
-                of the foundation is to bring the world to God’s love through
-                practical love (Ephesians 3 :19)
+                Love Vision foundation was birth from James 1 : 27. <br /> The
+                vision of the foundation is to bring the world to God’s love
+                <br /> through practical love (Ephesians 3 :19)
               </p>
             </div>
-            <div className="videoplayer">
+            <div className="video1 my-5">
               <img src="/images/videoplayer.png" alt="videoplayer" />
             </div>
 
-            <div className="my-3">
+            <div className="my-5">
               <div className="grid-3 container ">
                 <div className="grid-item bg-primary p-3   text-center text-light">
                   <p className="font-weight-bold">Love Homes</p>
@@ -79,7 +79,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-3">
+              <div className="mt-5 video2">
                 <img src="/images/video2.png" alt="" />
               </div>
             </div>
@@ -91,7 +91,8 @@ const HomePage: React.FC = () => {
               <p>Testimonials</p>
               <div className="line"></div>
             </div>
-
+            <div className="pattern1 d-none d-md-block"></div>
+            <div className="pattern2 d-none d-md-block"></div>
             <div className="testimonial-slider">
               <div className="inner">
                 <div className="wrapper">

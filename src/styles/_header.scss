@@ -1,12 +1,4 @@
-.front-nav {
-  background: linear-gradient(
-    269.99deg,
-    #000000 14.57%,
-    rgba(0, 0, 0, 0.928298) 51.44%,
-    rgba(0, 0, 0, 0.145493) 103.43%,
-    rgba(0, 0, 0, 0) 103.43%
-  );
-
+#header {
   .nav-brand {
     display: flex;
     align-items: center;
@@ -34,24 +26,81 @@
       text-decoration: none;
     }
   }
+  .front-nav {
+    background: linear-gradient(
+      269.99deg,
+      #000000 14.57%,
+      rgba(0, 0, 0, 0.928298) 51.44%,
+      rgba(0, 0, 0, 0.145493) 103.43%,
+      rgba(0, 0, 0, 0) 103.43%
+    );
 
-  ul.nav {
-    .get-involved {
-      .dropdown-menu {
-        border: 0;
-        background: #040404;
+    ul.nav {
+      .get-involved {
+        .dropdown-menu {
+          border: 0;
+          background: #040404;
 
-        .nav-item {
-          border-bottom: 2px solid $light;
-        }
-        &.show {
-          text-align: center;
+          .nav-item {
+            border-bottom: 2px solid $light;
+          }
+          &.show {
+            text-align: center;
 
-          // display: flex;
-          // flex-direction: column;
-          // align-items: center;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+          }
         }
       }
+    }
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    position: relative;
+    .top-wrapper {
+      display: flex;
+    }
+
+    ul.nav {
+      display: none;
+      position: absolute;
+      background: rgba(15, 11, 182, 0.67);
+      width: 100vw;
+      top: 0;
+      height: 80vh;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+      .nav-item a {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &.show {
+        display: flex;
+      }
+
+      .mobile-dropdown-menu {
+        display: none;
+        @include transition;
+        &.show {
+          @include transition;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .desktop-nav {
+      display: flex;
+    }
+    .mobile-nav {
+      display: none;
     }
   }
 }
