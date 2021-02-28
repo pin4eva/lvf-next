@@ -53,6 +53,15 @@
         width: 100%;
       }
     }
+    .grid-item {
+      position: relative;
+      transition: all 0.8s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-20px);
+        // border-radius: 100%;
+      }
+    }
   }
 
   .testimonial {
@@ -123,6 +132,9 @@
       .grid-item {
         text-align: center;
         position: relative;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+
         img {
           width: 100%;
           max-width: 12rem;
@@ -136,10 +148,11 @@
           }
         }
         .biocard {
+          transition: all 1s ease-in-out;
           position: absolute;
           bottom: 117%;
           display: none;
-          transition: 0.5s display ease-in-out;
+          // transition: 0.5s display ease-in-out;
           .inner {
             position: relative;
             padding: 1rem;

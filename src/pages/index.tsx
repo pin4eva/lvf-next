@@ -2,6 +2,8 @@ import FooterComp from "components/FooterComp";
 import HeaderComp from "components/HeaderComp";
 import React from "react";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 
 const HomePage: React.FC = () => {
   return (
@@ -12,12 +14,14 @@ const HomePage: React.FC = () => {
           <div className="container">
             <div className="overlay-inner">
               <div className="wrapper">
-                <h1 className="banner-display text-center">
-                  WELCOME TO <br /> LOVE VISION FOUNDATION
-                </h1>
-                <div className="text-center">
-                  <button className="btn btn-grad">Learn More</button>
-                </div>
+                <Slide left>
+                  <h1 className="banner-display text-center">
+                    WELCOME TO <br /> LOVE VISION FOUNDATION
+                  </h1>
+                  <div className="text-center">
+                    <button className="btn btn-grad">Learn More</button>
+                  </div>
+                </Slide>
               </div>
             </div>
           </div>
@@ -26,18 +30,20 @@ const HomePage: React.FC = () => {
       <main>
         <div className="container">
           <div className="intro">
-            <div className="text-center my-5">
-              <div className="section-title">
-                <div className="line"></div>
-                <p> What We Do</p>
-                <div className="line"></div>
+            <Fade up>
+              <div className="text-center my-5">
+                <div className="section-title">
+                  <div className="line"></div>
+                  <p> What We Do</p>
+                  <div className="line"></div>
+                </div>
+                <p>
+                  Love Vision foundation was birth from James 1 : 27. <br /> The
+                  vision of the foundation is to bring the world to God’s love
+                  <br /> through practical love (Ephesians 3 :19)
+                </p>
               </div>
-              <p>
-                Love Vision foundation was birth from James 1 : 27. <br /> The
-                vision of the foundation is to bring the world to God’s love
-                <br /> through practical love (Ephesians 3 :19)
-              </p>
-            </div>
+            </Fade>
             <div className="video1 my-5">
               <img src="/images/videoplayer.png" alt="videoplayer" />
             </div>
