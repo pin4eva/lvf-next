@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from "react";
+import NextLink from "next/link";
 
 const DesktopNav = (): JSX.Element => {
   useEffect(() => {
@@ -15,7 +16,7 @@ const DesktopNav = (): JSX.Element => {
   return (
     <nav className="navbar front-nav desktop-nav">
       <div className="container">
-        <a href="#" className="nav-brand">
+        <a href="/" className="nav-brand">
           <img src="/images/logo-hand.svg" alt="" />
           <div className="logo-text">
             <p className="top font-weight-bold">
@@ -28,7 +29,7 @@ const DesktopNav = (): JSX.Element => {
 
         <ul className="nav">
           <li className="nav-item">
-            <a href="#" className="nav-link text-light">
+            <a href="/" className="nav-link text-light">
               Home
             </a>
           </li>
@@ -48,9 +49,9 @@ const DesktopNav = (): JSX.Element => {
             </a>
             <ul className=" dropdown-menu m-0">
               <li className="nav-item">
-                <a href="#" className="nav-link text-light">
-                  Join LVF
-                </a>
+                <NextLink href="/connect">
+                  <a className="nav-link text-light">Join LVF</a>
+                </NextLink>
               </li>
 
               <li className="nav-item">
@@ -95,7 +96,7 @@ const MobileNav = () => {
   return (
     <div className="mobile-nav">
       <nav className="top-wrapper navbar align-items-center">
-        <a href="#" className="nav-brand">
+        <a href="/" className="nav-brand">
           <img src="/images/logo-hand.svg" />
           <div className="logo-text">
             <p className="top font-weight-bold">
@@ -113,7 +114,7 @@ const MobileNav = () => {
       </nav>
       <ul className="nav mobile-ul flex-column">
         <li className="nav-item">
-          <a href="#" className="nav-link text-light">
+          <a href="/" className="nav-link text-light">
             Home
           </a>
         </li>
