@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect } from "react";
 import NextLink from "next/link";
+import React, { useEffect } from "react";
 
 const DesktopNav = (): JSX.Element => {
   useEffect(() => {
@@ -44,20 +44,20 @@ const DesktopNav = (): JSX.Element => {
             </a>
           </li>
           <li className="nav-item get-involved dropdown">
-            <a href="#" className="nav-link text-light">
+            <a className="nav-link text-light">
               Get Involved <i className="fas fa-chevron-down "></i>
             </a>
             <ul className=" dropdown-menu m-0">
               <li className="nav-item">
-                <NextLink href="/connect">
+                <NextLink href="/join">
                   <a className="nav-link text-light">Join LVF</a>
                 </NextLink>
               </li>
 
               <li className="nav-item">
-                <a href="#" className="nav-link text-light">
-                  Partnership
-                </a>
+                <NextLink href="/connect">
+                  <a className="nav-link text-light">Partnership</a>
+                </NextLink>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link text-light">

@@ -4,11 +4,11 @@ import Head from "next/head";
 import React, { Fragment } from "react";
 import Slide from "react-reveal/Slide";
 
-const ConnectPage: React.FC = (): JSX.Element => {
+const JoinPage: React.FC = (): JSX.Element => {
   return (
     <Fragment>
       <Head>
-        <title>Connect with LVF</title>
+        <title>Join US</title>
         <meta name="description" content="Join Us" />
       </Head>
       <div className="connect-banner">
@@ -42,15 +42,31 @@ const ConnectPage: React.FC = (): JSX.Element => {
                         className="form-control transparent"
                       />
                     </div>
-                    <div className="mb-3">
-                      <textarea
-                        name=""
-                        id=""
-                        placeholder="Type your message here"
-                        cols={30}
-                        rows={10}
+                    <div className="form-group mb-3">
+                      <input
+                        type="tel"
+                        placeholder="Phone Number"
                         className="form-control transparent"
-                      ></textarea>
+                      />
+                    </div>
+                    <div className="d-md-flex form-group">
+                      <select
+                        placeholder="Occupation"
+                        className="form-control mb-2 transparent"
+                      >
+                        <option>Clergy</option>
+                        <option>Business</option>
+                        <option>Others</option>
+                      </select>
+                      <select
+                        placeholder="Occupation"
+                        className="form-control mb-2 transparent"
+                      >
+                        <option value="">Age</option>
+                        <option>18 - 25</option>
+                        <option>26 - 30</option>
+                        <option>30 and above</option>
+                      </select>
                     </div>
                     <div className="text-center">
                       <button className="btn btn-grad">Send</button>
@@ -61,10 +77,10 @@ const ConnectPage: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <FooterComp />
       </div>
-      <FooterComp />
     </Fragment>
   );
 };
 
-export default ConnectPage;
+export default JoinPage;
