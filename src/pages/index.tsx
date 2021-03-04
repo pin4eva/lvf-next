@@ -45,7 +45,11 @@ const HomePage: React.FC = () => {
               </div>
             </Fade>
             <div className="video1 my-5">
-              <img src="/images/videoplayer.png" alt="videoplayer" />
+              <img
+                src="/images/videoplayer.png"
+                loading="lazy"
+                alt="videoplayer"
+              />
             </div>
 
             <div className="my-5">
@@ -86,7 +90,7 @@ const HomePage: React.FC = () => {
               </div>
 
               <div className="mt-5 video2">
-                <img src="/images/video2.png" alt="" />
+                <img src="/images/video2.png" loading="lazy" alt="" />
               </div>
             </div>
           </div>
@@ -105,7 +109,7 @@ const HomePage: React.FC = () => {
                   <i className="fas fa-caret-left text-primary fa-3x"></i>
                   <div className="wrapper-main">
                     <div className="text-center">
-                      <img src="/images/pic3.png" alt="" />
+                      <img src="/images/pic3.png" loading="lazy" alt="" />
                       <p className="my-3">
                         Nemo enim ipsam voluptatem quia voluptas sit aspernatur{" "}
                         <br />
@@ -137,9 +141,19 @@ const HomePage: React.FC = () => {
                 <div className="wrapper">
                   <i className="fas fa-caret-left text-primary fa-3x"></i>
                   <div className="wrapper-main">
-                    <img src="/images/pic4.png" alt="" width="300" />
-                    <img src="/images/pic5.png" alt="" />
-                    <img src="/images/pic6.png" alt="" width="300" />
+                    <img
+                      loading="lazy"
+                      src="/images/pic4.png"
+                      alt=""
+                      width="300"
+                    />
+                    <img loading="lazy" src="/images/pic5.png" alt="" />
+                    <img
+                      loading="lazy"
+                      src="/images/pic6.png"
+                      alt=""
+                      width="300"
+                    />
                   </div>
                   <i className="fas fa-caret-right text-primary fa-3x"></i>
                 </div>
@@ -166,7 +180,7 @@ const HomePage: React.FC = () => {
               <div className="container bg-primary p-4">
                 <div className="podcast-wrapper">
                   <div className="item d-flex align-items-center">
-                    <img src="/images/microphone.svg" alt="" />
+                    <img loading="lazy" src="/images/microphone.svg" alt="" />
                     <div className="left">
                       <p className="mb-1">
                         Listen to our <br /> live Podcast
@@ -178,7 +192,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="line"></div>
                   <div className="item d-flex align-items-center">
-                    <img src="/images/monitor.svg" alt="" />
+                    <img loading="lazy" src="/images/monitor.svg" alt="" />
                     <div className="left ml-3">
                       <p className="mb-1">
                         Watch us on <br /> Youtube
@@ -205,7 +219,7 @@ const BoardMember = ({ team }: { team: ITeam }): JSX.Element => {
   return (
     <Wrapper>
       <div className="grid-item">
-        <img src={team.image} alt={team.name} />
+        <img loading="lazy" src={team.image} alt={team.name} />
         <p className="mt-2 font-weight-bold">{team.name}</p>
 
         <div className="biocard">
