@@ -4,6 +4,8 @@ import React from "react";
 import styled from "styled-components";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
+import GalleryComp from "components/Gallery";
+
 
 const HomePage: React.FC = () => {
   return (
@@ -129,39 +131,9 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="gallery">
-            <div className="section-title">
-              <div className="line"></div>
-              <p>Picture Gallery</p>
-              <div className="line"></div>
-            </div>
+          <GalleryComp />
 
-            <div className="gallery-slider">
-              <div className="inner">
-                <div className="wrapper">
-                  <i className="fas fa-caret-left text-primary fa-3x"></i>
-                  <div className="wrapper-main">
-                    <img
-                      loading="lazy"
-                      src="/images/pic4.png"
-                      alt=""
-                      width="300"
-                    />
-                    <img loading="lazy" src="/images/pic5.png" alt="" />
-                    <img
-                      loading="lazy"
-                      src="/images/pic6.png"
-                      alt=""
-                      width="300"
-                    />
-                  </div>
-                  <i className="fas fa-caret-right text-primary fa-3x"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="team">
+          <div className="team" id="team">
             <div className="section-title">
               <div className="line"></div>
               <p>Meet the team</p>

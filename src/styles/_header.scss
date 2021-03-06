@@ -1,4 +1,14 @@
 #header {
+  @media screen and (min-width:768px){
+    .mobile-only{
+      display: none;
+    }
+  }
+  @media screen and (max-width:768px){
+    .desktop-only{
+      display: none;
+    }
+  }
   .nav-brand {
     display: flex;
     align-items: center;
@@ -43,6 +53,12 @@
 
           .nav-item {
             border-bottom: 2px solid $light;
+            .nav-link{
+              &:active{
+                background: #494949;
+
+              }
+            }
           }
           &.show {
             text-align: center;
@@ -82,11 +98,13 @@
 
       &.show {
         display: flex;
+        flex-direction: column;
       }
 
-      .mobile-dropdown-menu {
+      .dropdown-menu {
         display: none;
         @include transition;
+        background-color: $primary;
         &.show {
           @include transition;
           display: flex;

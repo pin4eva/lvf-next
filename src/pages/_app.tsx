@@ -2,6 +2,8 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React, { Fragment, useState } from "react";
+import "@glidejs/glide/dist/css/glide.core.min.css";
+import "@glidejs/glide/dist/css/glide.theme.min.css";
 import "../styles/index.scss";
 
 const MyApp: React.FC<AppProps> = ({
@@ -20,6 +22,8 @@ const MyApp: React.FC<AppProps> = ({
     <Fragment>
       <Head>
         <title>Love Vision Foundation</title>
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script src="/customjs.js" type="text/javascript" defer></script>
       </Head>
       <Component {...pageProps} />
     </Fragment>

@@ -37,7 +37,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "public/customjs.js"  ],
   "exclude": [
     "node_modules"
   ]
