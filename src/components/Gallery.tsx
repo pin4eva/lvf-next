@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import styled from "styled-components";
-import Image from "next/image";
 import Glide from "@glidejs/glide";
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
 const GalleryComp = (): JSX.Element => {
-  const [index, setIndex] = useState(0);
-
   useEffect(() => {
     if (process.browser) {
       new Glide(".glide", {
@@ -76,12 +72,5 @@ const Wrapper = styled.div`
     box-shadow: none;
   }
 `;
-
-const images = [
-  "/images/pic4.png",
-  "/images/pic5.png",
-  "/images/pic6.png",
-  "/images/pic7.png",
-];
 
 export default GalleryComp;
